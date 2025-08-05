@@ -1,0 +1,102 @@
+# Cómo sucede un conflicto en Git
+
+Un conflicto en Git ocurre cuando dos ramas tienen cambios en las mismas líneas de un archivo y Git no puede determinar automáticamente cuál de los cambios debe mantenerse. A continuación, se detallan los pasos para crear un conflicto de manera intencional:
+
+## Pasos para Crear un Conflicto
+
+1. **Clonar el Repositorio**
+   
+   Asegúrate de tener un repositorio clonado localmente. Si no se tiene, clonarlo con el siguiente comando:
+
+   ```bash
+   git clone <url-del-repositorio>
+   ```
+
+2. **Crear y Cambiar a una Nueva Rama**
+   
+   Crea una nueva rama y úsala:
+
+   ```bash
+   git checkout -b rama-conflicto
+   ```
+
+3. **Modificar un Archivo en la Nueva Rama**
+   
+   Abrir un archivo existente y realizar cambios en él. Por ejemplo, edita un archivo llamado `archivo.txt` y añade la siguiente línea:
+
+   ```
+   Cambio en la rama-conflicto
+   ```
+
+   Guarda los cambios y realiza un commit:
+
+   ```bash
+   git add .
+   git commit -m "Cambio en rama-conflicto"
+   ```
+
+4. **Cambiar a la Rama Principal (main)**
+   
+   Cambia de vuelta a la rama principal:
+
+   ```bash
+   git checkout main
+   ```
+
+5. **Modificar el Mismo Archivo en la Rama Principal**
+   
+   Realiza un cambio diferente en el mismo archivo `archivo.txt`. Por ejemplo, añade la siguiente línea:
+
+   ```
+   Cambio en la rama principal
+   ```
+
+   Guarda los cambios y realiza un commit:
+
+   ```bash
+   git add archivo.txt
+   git commit -m "Cambio en rama principal"
+   ```
+
+6. **Fusionar las Ramas**
+   
+   Intenta fusionar la rama `rama-conflicto` en la rama principal:
+
+   ```bash
+   git merge rama-conflicto
+   ```
+
+   Git detectará un conflicto y mostrará un mensaje indicando que hay conflictos que deben resolverse.
+
+## Resolver el Conflicto
+
+1. Abre el archivo con conflictos. Verás algo como esto:
+
+   ```
+   <<<<<<< HEAD
+   Cambio en la rama principal
+   =======
+   Cambio en la rama-conflicto
+   >>>>>>> rama-conflicto
+   ```
+
+2. Edita el archivo para resolver el conflicto. Por ejemplo, puedes combinar los cambios o elegir uno de ellos:
+
+   ```
+   Cambio en la rama principal
+   Cambio en la rama-conflicto
+   ```
+
+3. Una vez resuelto, añade el archivo al área de staging:
+
+   ```bash
+   git add archivo.txt
+   ```
+
+4. Completa la fusión:
+
+   ```bash
+   git commit -m "Resuelto conflicto entre main y rama-conflicto"
+   ```
+
+¡Listo! Has creado y resuelto un conflicto en Git.

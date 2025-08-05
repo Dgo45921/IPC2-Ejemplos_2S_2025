@@ -202,4 +202,7 @@ Para obtener ayuda sobre un comando específico:
 git help <comando>
 ```
 
+## Crear un Conflicto en Git
+Para aprender a crear un conflicto en Git, consulta [este archivo](./crear_conflicto_git.md).
+
 ---
