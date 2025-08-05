@@ -6,7 +6,7 @@ Un conflicto en Git ocurre cuando dos ramas tienen cambios en las mismas líneas
 
 1. **Clonar el Repositorio**
    
-   Asegúrate de tener un repositorio clonado localmente. Si no se tiene, clonarlo con el siguiente comando:
+   Se debe tener un repositorio clonado localmente. Si no se tiene, clonarlo con el siguiente comando:
 
    ```bash
    git clone <url-del-repositorio>
@@ -28,24 +28,24 @@ Un conflicto en Git ocurre cuando dos ramas tienen cambios en las mismas líneas
    Cambio en la rama-conflicto
    ```
 
-   Guarda los cambios y realiza un commit:
+   Guardar los cambios y realiza un commit:
 
    ```bash
    git add .
    git commit -m "Cambio en rama-conflicto"
    ```
 
-4. **Cambiar a la Rama Principal (main)**
+4. **Cambiar a la Rama Principal (master)**
    
-   Cambia de vuelta a la rama principal:
+   Cambiamos de vuelta a la rama principal:
 
    ```bash
-   git checkout main
+   git checkout master
    ```
 
 5. **Modificar el Mismo Archivo en la Rama Principal**
    
-   Realiza un cambio diferente en el mismo archivo `archivo.txt`. Por ejemplo, añade la siguiente línea:
+   Realizar un cambio diferente en el mismo archivo `archivo.txt`. Por ejemplo, agregando la siguiente línea:
 
    ```
    Cambio en la rama principal
@@ -70,7 +70,7 @@ Un conflicto en Git ocurre cuando dos ramas tienen cambios en las mismas líneas
 
 ## Resolver el Conflicto
 
-1. Abre el archivo con conflictos. Verás algo como esto:
+1. Al ver un archivo con conflicto. El editor de código nos permitirá ver
 
    ```
    <<<<<<< HEAD
@@ -80,23 +80,23 @@ Un conflicto en Git ocurre cuando dos ramas tienen cambios en las mismas líneas
    >>>>>>> rama-conflicto
    ```
 
-2. Edita el archivo para resolver el conflicto. Por ejemplo, puedes combinar los cambios o elegir uno de ellos:
+2. Editar el archivo para resolver el conflicto. Por ejemplo, se pueden combinar los cambios o elegir uno de ellos:
 
    ```
    Cambio en la rama principal
    Cambio en la rama-conflicto
    ```
 
-3. Una vez resuelto, añade el archivo al área de staging:
+3. Una vez resuelto, agreganis el archivo al área de staging:
 
    ```bash
-   git add archivo.txt
+   git add .
    ```
 
-4. Completa la fusión:
+4. Completa la fusión(merge):
 
    ```bash
    git commit -m "Resuelto conflicto entre main y rama-conflicto"
    ```
 
-¡Listo! Has creado y resuelto un conflicto en Git.
+¡Listo! Se ha creado y resuelto un conflicto en Git.
