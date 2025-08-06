@@ -11,4 +11,3 @@ class Vehiculo:
     def obtener_color(self):
         return self.color
     
-    

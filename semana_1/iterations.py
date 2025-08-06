@@ -9,7 +9,7 @@ for fruta in frutas:
 
 # 2. Usar range para imprimir números del 0 al 4
 print("\nEjemplo 2: Usar range en un for")
-for i in range(5):
+for i in range(1,5):
     print(i)
 
 # 3. Iterar sobre los caracteres de una cadena
@@ -26,3 +26,9 @@ while contador <= 5:
     contador += 1
 
 
+
+edad = input("ingrese su edad")
+
+edad_numero = int(edad)
+
+print(edad_numero+5)

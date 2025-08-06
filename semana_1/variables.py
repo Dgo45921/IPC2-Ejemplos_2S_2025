@@ -20,9 +20,21 @@ fadsf
 
 prueba = "Hola \n Adios"
 
+print(cadena_multilinea)
+
 print(prueba)
 
 
 mensaje = "Hola, soy un mensaje de texto"
 
 mensaje_formateado = f"Hola este es el mensaje: {mensaje}"
+
+
+print(mensaje_formateado)
+
+# booleanos
+verdadero = True
+
+
+print(True and False)
+print(True or False)

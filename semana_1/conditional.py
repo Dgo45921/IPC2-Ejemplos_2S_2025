@@ -3,6 +3,8 @@ numero = 10
 # Verifica si el número es mayor que 5
 if numero > 5:
     print("El número es mayor que 5")
+    if numero == 10:
+        print("el numero es 10")
 
 
 
