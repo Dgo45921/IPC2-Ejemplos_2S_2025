@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<universidad>
+    <facultades>
+        <facultad id="1">
+            <nombre>Facultad de Ingeniería</nombre>
+            <alumnos>
+                <alumno id="201">
+                    <nombre>Laura García</nombre>
+                    <correo>laura.garcia@universidad.edu</correo>
+                    <edad>21</edad>
+                </alumno>
+                <alumno id="202">
+                    <nombre>Carlos Pérez</nombre>
+                    <correo>carlos.perez@universidad.edu</correo>
+                    <edad>22</edad>
+                </alumno>
+            </alumnos>
+        </facultad>
+        <facultad id="2">
+            <nombre>Facultad de Ciencias Sociales</nombre>
+            <alumnos>
+                <alumno id="203">
+                    <nombre>Carlos López</nombre>
+                    <correo>carlos.lopez@universidad.edu</correo>
+                    <edad>20</edad>
+                </alumno>
+                <alumno id="204">
+                    <nombre>Marta Rodríguez</nombre>
+                    <correo>marta.rodriguez@universidad.edu</correo>
+                    <edad>23</edad>
+                </alumno>
+                <alumno id="205">
+                    <nombre>José Fernández</nombre>
+                    <correo>jose.fernandez@universidad.edu</correo>
+                    <edad>25</edad>
+                </alumno>
+            </alumnos>
+        </facultad>
+        <facultad id="3">
+            <nombre>Facultad de Medicina</nombre>
+            <alumnos>
+                <alumno id="206">
+                    <nombre>Isabel Ruiz</nombre>
+                    <correo>isabel.ruiz@universidad.edu</correo>
+                    <edad>24</edad>
+                </alumno>
+                <alumno id="207">
+                    <nombre>David Gómez</nombre>
+                    <correo>david.gomez@universidad.edu</correo>
+                    <edad>26</edad>
+                </alumno>
+            </alumnos>
+        </facultad>
+    </facultades>
+</universidad>
