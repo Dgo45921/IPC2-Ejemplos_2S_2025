@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<universidad>
+    <facultades>
+        <facultad id="1">
+            <nombre>Facultad de Ingeniería</nombre>
+            <carrera id="1">Ingeniería en ciencias y sistemas</carrera>
+            <carrera id="2">Ingeniería Civil</carrera>
+            <carrera id="3">Ingeniería Electrónica</carrera>
+            <carrera id="4">Ingeniería Mecánica</carrera>
+            <personas>
+                <profesor id="101"  >
+                    <nombre>Juan Ochoa</nombre>
+                    <correo>juan.Ochoa@universidad.edu</correo>
+                </profesor>
+                <profesor id="102" >
+                    <nombre>Mario Sánchez</nombre>
+                    <correo>mario.sanchez@universidad.edu</correo>
+                </profesor>
+                <estudiante id="201">
+                    <nombre>Laura García</nombre>
+                    <correo>laura.garcia@universidad.edu</correo>
+                    <edad>21</edad>
+                </estudiante>
+                <estudiante id="202">
+                    <nombre>Carlos Pérez</nombre>
+                    <correo>carlos.perez@universidad.edu</correo>
+                    <edad>22</edad>
+                </estudiante>
+            </personas>
+        </facultad>
+        <facultad id="2">
+            <nombre>Facultad de Ciencias Sociales</nombre>
+            <carrera id="1">Psicología</carrera>
+            <carrera id="2">Sociología</carrera>
+            <carrera id="3">Trabajo Social</carrera>
+            <personas>
+                <profesor id="103">
+                    <nombre>Ana Torres</nombre>
+                    <correo>ana.torres@universidad.edu</correo>
+                </profesor>
+                <estudiante id="203">
+                    <nombre>Carlos López</nombre>
+                    <correo>carlos.lopez@universidad.edu</correo>
+                    <edad>20</edad>
+                </estudiante>
+                <estudiante id="204">
+                    <nombre>Marta Rodríguez</nombre>
+                    <correo>marta.rodriguez@universidad.edu</correo>
+                    <edad>23</edad>
+                </estudiante>
+                <estudiante id="205">
+                    <nombre>José Fernández</nombre>
+                    <correo>jose.fernandez@universidad.edu</correo>
+                    <edad>25</edad>
+                </estudiante>
+            </personas>
+        </facultad>
+        <facultad id="3">
+            <nombre>Facultad de Medicina</nombre>
+            <carrera id="1">Medicina</carrera>
+            <carrera id="2">Enfermería</carrera>
+            <carrera id="3">Fisioterapia</carrera>
+            <personas>
+                <profesor id="104">
+                    <nombre>Raúl Jiménez</nombre>
+                    <correo>raul.jimenez@universidad.edu</correo>
+
+                </profesor>
+                <estudiante id="206">
+                    <nombre>Isabel Ruiz</nombre>
+                    <correo>isabel.ruiz@universidad.edu</correo>
+                    <edad>24</edad>
+                </estudiante>
+                <estudiante id="207">
+                    <nombre>David Gómez</nombre>
+                    <correo>david.gomez@universidad.edu</correo>
+                    <edad>26</edad>
+                </estudiante>
+            </personas>
+        </facultad>
+    </facultades>
+</universidad>
