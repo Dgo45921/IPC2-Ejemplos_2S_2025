@@ -1,0 +1,9 @@
+digraph G {
+  rankdir = LR;
+  splines = ortho;
+  graph [pencolor = transparent, rank = same];
+  node  [shape = record];
+
+  node1 [label = "Max"]
+
+}
