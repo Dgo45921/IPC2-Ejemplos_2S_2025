@@ -1,0 +1,42 @@
+digraph G {
+    node [shape=box, width=1.5, height=0.6];
+
+    // Facultad 1
+    facultad1 [label="Facultad\nid=1, nombre=Ingeniería"];
+    listaAlumnos1 [label="ListaAlumno"];
+    facultad1 -> listaAlumnos1;
+
+    alumno1_1 [label="Alumno\nAna"];
+    alumno1_2 [label="Alumno\nLuis"];
+    alumno1_3 [label="Alumno\nCarla"];
+
+    listaAlumnos1 -> alumno1_1;
+    alumno1_1 -> alumno1_2;
+    alumno1_2 -> alumno1_3;
+
+    // Facultad 2
+    facultad2 [label="Facultad\nid=2, nombre=Ciencias"];
+    listaAlumnos2 [label="ListaAlumno"];
+    facultad2 -> listaAlumnos2;
+
+    alumno2_1 [label="Alumno\nPedro"];
+    alumno2_2 [label="Alumno\nLucía"];
+
+    listaAlumnos2 -> alumno2_1;
+    alumno2_1 -> alumno2_2;
+
+    // Facultad 3
+    facultad3 [label="Facultad\nid=3, nombre=Artes"];
+    listaAlumnos3 [label="ListaAlumno"];
+    facultad3 -> listaAlumnos3;
+
+    alumno3_1 [label="Alumno\nAndrés"];
+
+    listaAlumnos3 -> alumno3_1;
+
+    // Conexión entre Facultades
+    facultad1 -> facultad2;
+    facultad2 -> facultad3;
+    
+    {rank=same; facultad1; facultad2; facultad3;}
+}

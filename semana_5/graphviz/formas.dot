@@ -1,0 +1,9 @@
+digraph Formas {
+    nodo1 [shape=box, label="Caja"];
+    nodo2 [shape=ellipse, label="Elipse"];
+    nodo3 [shape=diamond, label="Diamante"];
+    nodo4 [shape=polygon, sides=6, label="Hexágono"];
+    nodo1 -> nodo2;
+    nodo2 -> nodo3;
+    nodo3 -> nodo4;
+}

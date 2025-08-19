@@ -1,0 +1,10 @@
+digraph Tabla {
+    node [shape=plaintext];
+    tabla [label=<
+        <TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0">
+            <TR><TD>Nombre</TD><TD>Edad</TD></TR>
+            <TR><TD>Ana</TD><TD>20</TD></TR>
+            <TR><TD>Juan</TD><TD>22</TD></TR>
+        </TABLE>
+    >];
+}

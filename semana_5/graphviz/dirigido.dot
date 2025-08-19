@@ -1,0 +1,6 @@
+digraph Dirigido {
+    node [shape=circle];
+    A -> B;
+    B -> C;
+    C -> A;
+}
