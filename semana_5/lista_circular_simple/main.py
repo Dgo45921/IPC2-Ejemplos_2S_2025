@@ -1,6 +1,7 @@
 
 from Animal import Animal
 from ListaAnimal import ListaAnimal
+from graphList import graficar_lista
 
 def main():
 	lista = ListaAnimal()
@@ -37,6 +38,7 @@ def main():
 	actualizado = lista.actualizar(a4, nuevo_animal)
 	print("Actualizado" if actualizado else "No encontrado")
 	lista.imprimir()
+	graficar_lista(lista)
 
 if __name__ == "__main__":
 	main()

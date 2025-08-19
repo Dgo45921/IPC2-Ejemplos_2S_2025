@@ -31,7 +31,7 @@ def graficar_lista(animales):
     dot += dot_nodes + '\n' + dot_edges
     dot += '}'
 
-    # Obtienes la ruta del directorio actual
+    # Obtiene la ruta del directorio actual
     directorio_actual = os.path.dirname(os.path.abspath(__file__))
     
     # Define la ruta completa para los archivos de salida
