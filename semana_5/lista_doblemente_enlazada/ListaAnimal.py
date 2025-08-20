@@ -46,7 +46,6 @@ class ListaAnimal:
                     self.ultimo = actual.anterior
                     self.ultimo.siguiente = None
                     actual.anterior = None
-                    pass
                 else: # nodo intermedio
                     actual.anterior.siguiente = actual.siguiente
                     actual.siguiente.anterior = actual.anterior

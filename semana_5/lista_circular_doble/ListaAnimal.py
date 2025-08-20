@@ -34,32 +34,38 @@ class ListaAnimal:
 
     def eliminar(self, animal):
         actual = self.primero
-        if not actual:
+
+        # lista vacia
+        if actual is None:
             return False
-        while True:
+        
+        # es el primer nodo el que se quiere eliminar
+        if actual.animal.nombre == animal.nombre:
+            self.primero = actual.siguiente
+            actual.siguiente.anterior = self.ultimo
+            self.ultimo.siguiente = self.primero
+            actual.siguiente = None
+            actual.anterior = None
+            self.size -= 1
+            return True
+        
+        # es un nodo intermedio o final
+        while actual:
             if actual.animal.nombre == animal.nombre:
-                if self.size == 1:
-                    self.primero = self.ultimo = None
-                else:
-                    if actual == self.primero:
-                        # primer nodo
-                        self.primero = actual.siguiente
-                        self.ultimo.siguiente = self.primero
-                        self.primero.anterior = self.ultimo
-                    elif actual == self.ultimo:
-                        # ultimo nodo
-                        self.ultimo = actual.anterior
-                        self.ultimo.siguiente = self.primero
-                        self.primero.anterior = self.ultimo
-                    else:
-                        # nodo intermedio
-                        actual.anterior.siguiente = actual.siguiente
-                        actual.siguiente.anterior = actual.anterior
+                if actual == self.ultimo: # nodo final
+                    self.ultimo = actual.anterior
+                    self.ultimo.siguiente = self.primero
+                    actual.anterior = None
+                    self.primero.anterior = self.ultimo
+                    actual.siguiente = None
+                    
+                else: # nodo intermedio
+                    actual.anterior.siguiente = actual.siguiente
+                    actual.siguiente.anterior = actual.anterior
                 self.size -= 1
                 return True
+
             actual = actual.siguiente
-            if actual == self.primero:
-                break
         return False
 
     def actualizar(self, viejo, nuevo):

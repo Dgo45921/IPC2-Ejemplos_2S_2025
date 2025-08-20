@@ -4,8 +4,8 @@ digraph G {
   graph [pencolor = transparent, rank = same];
   node  [shape = record];
 
-  node1 [label = "Max"]
-  node2 [label = "Mimi"]
+  node1 [label = "Mimi"]
+  node2 [label = "Dumbo"]
   node3 [label = "Nala"]
 
   node1 -> node2;

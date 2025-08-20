@@ -28,7 +28,7 @@ def main():
 
 	# Eliminar un animal
 	print("\nEliminando a Dumbo:")
-	eliminado = lista.eliminar(a3)
+	eliminado = lista.eliminar(a1)
 	print("Eliminado" if eliminado else "No encontrado")
 	lista.imprimir()
 
