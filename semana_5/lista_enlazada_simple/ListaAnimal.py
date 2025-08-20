@@ -11,7 +11,6 @@ class ListaAnimal:
         if self.primero is None:
             self.primero = self.ultimo = nuevo
         else:
-            nuevo.anterior = self.ultimo
             self.ultimo.siguiente = nuevo
             self.ultimo = nuevo
         self.size += 1
@@ -26,26 +25,32 @@ class ListaAnimal:
 
     def eliminar(self, animal):
         actual = self.primero
+        previo = None
+
+        # lista vacia
+        if actual is None:
+            return False
+        
+        # es el primer nodo el que se quiere eliminar
+        if actual.animal.nombre == animal.nombre:
+            self.primero = actual.siguiente
+            self.size -= 1
+            return True
+        
+        # es un nodo intermedio o final
         while actual:
             if actual.animal.nombre == animal.nombre:
-
-                if actual.anterior:
-                    # no es el primer nodo
-                    actual.anterior.siguiente = actual.siguiente
-                else:
-                    # es el primer nodo
-                    self.primero = actual.siguiente
-
-                if actual.siguiente:
-                    # no es el último nodo
-                    actual.siguiente.anterior = actual.anterior
-                else:
-                    # es el último nodo
-                    self.ultimo = actual.anterior
+                if previo:
+                    previo.siguiente = actual.siguiente
+                if actual == self.ultimo:
+                    self.ultimo = previo
                 self.size -= 1
                 return True
+            previo = actual
             actual = actual.siguiente
         return False
+            
+
 
     def actualizar(self, viejo, nuevo):
         nodo = self.buscar(viejo)
