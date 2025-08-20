@@ -31,29 +31,32 @@ class ListaAnimal:
 
     def eliminar(self, animal):
         actual = self.primero
-        anterior = None
-        if not actual:
+        previo = None
+
+        # lista vacia
+        if actual is None:
             return False
-        while True:
+        
+        # es el primer nodo el que se quiere eliminar
+        if actual.animal.nombre == animal.nombre:
+            self.primero = actual.siguiente
+            self.ultimo.siguiente = self.primero # para mantener la circularidad
+            self.size -= 1
+            return True
+        
+        # es un nodo intermedio o el ultimo
+        while actual:
             if actual.animal.nombre == animal.nombre:
-                if self.size == 1:
-                    self.primero = self.ultimo = None
-                else:
-                    if actual == self.primero:
-                        self.primero = actual.siguiente
-                        self.ultimo.siguiente = self.primero
-                    else:
-                        anterior.siguiente = actual.siguiente
-                        if actual == self.ultimo:
-                            self.ultimo = anterior
-                            self.ultimo.siguiente = self.primero
+                if previo:
+                    previo.siguiente = actual.siguiente
+                if actual == self.ultimo:
+                    self.ultimo = previo
                 self.size -= 1
                 return True
-            anterior = actual
+            previo = actual
             actual = actual.siguiente
-            if actual == self.primero:
-                break
         return False
+    
 
     def actualizar(self, viejo, nuevo):
         nodo = self.buscar(viejo)

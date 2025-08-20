@@ -51,7 +51,6 @@ class ListaAnimal:
         return False
             
 
-
     def actualizar(self, viejo, nuevo):
         nodo = self.buscar(viejo)
         if nodo:
