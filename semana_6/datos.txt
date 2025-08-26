@@ -1,0 +1,3 @@
+Hola, este es un ejemplo de escritura en ficheros.
+Cada ejecución sobrescribe el contenido.
+Nueva línea añadida sin borrar lo anterior.

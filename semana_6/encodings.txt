@@ -1,0 +1,9 @@
+Hola, mundo!  
+Español: ñ, á, é, í, ó, ú, ü  
+Francés: à, ç, œ, É  
+Alemán: ß, Ä, Ö, Ü  
+Griego: Α, Β, Γ, Δ, Ω  
+Ruso: Привет мир  
+Chino: 漢字  
+Japonés: こんにちは  
+Emoji: 😀🔥✨  
