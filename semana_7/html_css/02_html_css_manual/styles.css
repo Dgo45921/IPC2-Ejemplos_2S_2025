@@ -1,0 +1,94 @@
+
+/* Reset/normalización básica */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, Helvetica, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.6;
+  background: #0b1020;
+  color: #e6eaf2;
+}
+
+/* Variables (custom properties) */
+:root {
+  --bg: #0b1020;
+  --panel: #121933;
+  --text: #e6eaf2;
+  --muted: #a7b0c0;
+  --primary: #53b1fd;
+  --primary-contrast: #081120;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+/* Layout */
+nav {
+  background: #0f1630;
+  padding: 12px 16px;
+  position: sticky; top: 0; z-index: 5;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+nav a {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--muted);
+  margin-right: 6px;
+}
+nav a:hover, nav a[aria-current="page"] {
+  color: var(--text);
+  background: rgba(255,255,255,.06);
+}
+
+main, section, header, footer, figure {
+  background: var(--panel);
+  margin: 16px;
+  padding: 16px 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Tipografía */
+h1, h2, h3 { line-height: 1.25; margin-top: 0; }
+code, pre { background: rgba(255,255,255,.06); padding: 2px 6px; border-radius: 8px; }
+pre { padding: 12px; overflow: auto; }
+
+/* Tabla */
+table { width: 100%; border-collapse: collapse; background: #0d142a; border-radius: 12px; overflow: hidden; }
+th, td { padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,.08); text-align: left; }
+thead th { background: #0f1836; }
+tbody tr:hover { background: rgba(255,255,255,.04); }
+
+/* Formularios */
+form fieldset { border: 1px solid rgba(255,255,255,.15); border-radius: 12px; padding: 16px; }
+label { display: block; margin-top: 10px; color: var(--muted); }
+input, select, button {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.15);
+  background: #0c1430;
+  color: var(--text);
+}
+input[type="checkbox"], input[type="radio"] { width: auto; display: inline-block; margin-right: 6px; }
+button {
+  background: var(--primary);
+  color: var(--primary-contrast);
+  border: none; cursor: pointer; font-weight: 600;
+}
+button:hover { filter: brightness(1.05); }
+
+/* Grid para inputs */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+/* Figura */
+figure { text-align: center; }
+figcaption { color: var(--muted); }
+
+footer { text-align: center; color: var(--muted); background: transparent; box-shadow: none; }

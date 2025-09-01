@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>5.3 Componentes básicos</title>
+  <meta name="description" content="5.3 Componentes básicos — Demostración educativa de HTML5 y CSS." />
+</head>
+<body>
+
+<nav>
+  <!-- Navegación básica entre archivos de esta unidad -->
+  <a href="5.1_introduccion.html">5.1 Introducción</a> |
+  <a href="5.2_estructura_basica.html">5.2 Estructura básica</a> |
+  <a href="5.3_componentes_basicos.html">5.3 Componentes</a> |
+  <a href="5.4_css.html">5.4 CSS</a>
+</nav>
+<hr>
+
+<header>
+  <h1>5.3. Componentes básicos</h1>
+</header>
+
+<section id="elementos">
+  <h2>5.3.1. Elementos</h2>
+  <p>Un elemento HTML se compone de etiqueta de apertura, contenido y etiqueta de cierre.</p>
+</section>
+
+<section id="atributos">
+  <h2>5.3.2. Atributos</h2>
+  <p>Proporcionan información adicional. Ejemplo: <code>&lt;a href="https://ejemplo.com" target="_blank" rel="noopener"&gt;enlace&lt;/a&gt;</code>.</p>
+  <p>También hay atributos globales: <code>id</code>, <code>class</code>, <code>title</code>, <code>lang</code>, <code>data-*</code>, <code>style</code>, <code>hidden</code>, etc.</p>
+</section>
+
+<section id="parrafos">
+  <h2>5.3.3. Párrafos</h2>
+  <p>Los párrafos se marcan con <code>&lt;p&gt;</code>. Puedes usar <code>&lt;strong&gt;</code> y <code>&lt;em&gt;</code> para significado (no solo apariencia).</p>
+</section>
+
+<section id="estilos">
+  <h2>5.3.4. Estilos</h2>
+  <p style="color: #1e90ff; font-weight: 600">Este párrafo usa estilos en línea solo a modo demostrativo (no recomendado en producción).</p>
+</section>
+
+<section id="tablas">
+  <h2>5.3.5. Tablas</h2>
+  <table>
+    <caption>Tabla simple con <code>thead</code>, <code>tbody</code> y <code>tfoot</code></caption>
+    <thead>
+      <tr><th>Producto</th><th>Precio</th><th>Stock</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Teclado</td><td>25.90</td><td>57</td></tr>
+      <tr><td>Mouse</td><td>12.50</td><td>120</td></tr>
+      <tr><td>Monitor</td><td>189.99</td><td>34</td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td colspan="3">Valores de ejemplo</td></tr>
+    </tfoot>
+  </table>
+</section>
+
+<section id="imagenes">
+  <h2>5.3.6. Imágenes</h2>
+  <figure>
+    <img src="assets/placeholder.svg" alt="Paisaje abstracto" width="480" height="270" loading="lazy">
+    <figcaption>Imagen con <code>alt</code>, dimensiones y <code>loading="lazy"</code>.</figcaption>
+  </figure>
+</section>
+
+<section id="listas">
+  <h2>5.3.7. Listas</h2>
+  <h3>Desordenada</h3>
+  <ul>
+    <li>HTML</li><li>CSS</li><li>JS</li>
+  </ul>
+  <h3>Ordenada</h3>
+  <ol>
+    <li>Instalar editor</li><li>Crear proyecto</li><li>Escribir código</li>
+  </ol>
+  <h3>Descripción</h3>
+  <dl>
+    <dt>API</dt><dd>Interfaz de programación de aplicaciones.</dd>
+    <dt>DOM</dt><dd>Modelo de objetos del documento.</dd>
+  </dl>
+</section>
+
+<section id="formularios">
+  <h2>5.3.8. Elementos de un formulario</h2>
+  <form action="#" method="post" novalidate>
+    <fieldset>
+      <legend>Registro</legend>
+      <label for="nombre">Nombre</label>
+      <input id="nombre" name="nombre" required placeholder="Tu nombre">
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required placeholder="tucorreo@dominio.com">
+
+      <label for="pwd">Contraseña</label>
+      <input id="pwd" name="pwd" type="password" minlength="8" required>
+
+      <label for="pais">País</label>
+      <select id="pais" name="pais">
+        <option value="">Selecciona…</option>
+        <option>Guatemala</option>
+        <option>México</option>
+        <option>Argentina</option>
+      </select>
+
+      <label><input type="checkbox" name="acepto" required> Acepto términos</label>
+      <button type="submit">Enviar</button>
+    </fieldset>
+  </form>
+</section>
+
+<section id="tipos-input">
+  <h2>5.3.9. Tipos del elemento <code>input</code></h2>
+  <div class="grid">
+    <input type="text" placeholder="text">
+    <input type="number" placeholder="number">
+    <input type="email" placeholder="email">
+    <input type="url" placeholder="url">
+    <input type="date">
+    <input type="time">
+    <input type="color" value="#1e90ff">
+    <input type="range" min="0" max="100" value="50">
+    <input type="file">
+    <input type="search" placeholder="Buscar…">
+    <input type="tel" placeholder="+502 5555 5555">
+    <input type="checkbox"> <label>checkbox</label>
+    <input type="radio" name="r"> <label>radio</label>
+  </div>
+</section>
+
+<section id="attrs-input">
+  <h2>5.3.10. Atributos del elemento <code>input</code></h2>
+  <ul>
+    <li><code>required</code>, <code>min</code>, <code>max</code>, <code>step</code></li>
+    <li><code>pattern</code>, <code>minlength</code>, <code>maxlength</code></li>
+    <li><code>placeholder</code>, <code>readonly</code>, <code>disabled</code>, <code>autofocus</code></li>
+    <li><code>name</code>, <code>value</code></li>
+  </ul>
+</section>
+
+<footer>
+  <hr>
+  <p>Material educativo de ejemplo.</p>
+</footer>
+</body>
+</html>

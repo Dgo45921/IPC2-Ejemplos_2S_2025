@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>5.4 CSS</title>
+  <meta name="description" content="5.4 CSS — Demostración educativa de HTML5 y CSS." />
+</head>
+<body>
+
+<nav>
+  <!-- Navegación básica entre archivos de esta unidad -->
+  <a href="5.1_introduccion.html">5.1 Introducción</a> |
+  <a href="5.2_estructura_basica.html">5.2 Estructura básica</a> |
+  <a href="5.3_componentes_basicos.html">5.3 Componentes</a> |
+  <a href="5.4_css.html">5.4 CSS</a>
+</nav>
+<hr>
+
+<header>
+  <h1>5.4. CSS</h1>
+</header>
+
+<section>
+  <h2>5.4.1. Módulos CSS</h2>
+  <p>CSS está dividido en módulos: Selectors, Cascade & Inheritance, Values & Units, Box Model, Backgrounds & Borders, Text, Flexbox, Grid, Transforms, Transitions, Animations, Media Queries, etc.</p>
+</section>
+
+<section>
+  <h2>5.4.2. Conectar HTML y CSS</h2>
+  <p>Formas de conexión:</p>
+  <ol>
+    <li>Etiqueta <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code> (externo).</li>
+    <li>Etiqueta <code>&lt;style&gt;...&lt;/style&gt;</code> (interno).</li>
+    <li>Atributo <code>style="..."</code> (en línea; desaconsejado en producción).</li>
+  </ol>
+</section>
+
+<section>
+  <h2>5.4.3. Sintaxis de CSS</h2>
+  <pre><code>selector &#123;
+  propiedad: valor;
+  otra-propiedad: otro-valor;
+&#125;</code></pre>
+</section>
+
+<section>
+  <h2>5.4.4. Variables CSS (custom properties)</h2>
+  <pre><code>:root &#123;
+  --color-primario: #1e90ff;
+&#125;
+button &#123;
+  background: var(--color-primario);
+&#125;</code></pre>
+</section>
+
+<section>
+  <h2>5.4.5. Selectores</h2>
+  <ul>
+    <li>Tipo: <code>p</code>, Clase: <code>.nota</code>, ID: <code>#encabezado</code></li>
+    <li>Atributo: <code>input[type="email"]</code></li>
+    <li>Descendiente: <code>nav a</code>, Hijo: <code>ul &gt; li</code>, Hermano adyacente: <code>h2 + p</code></li>
+    <li>Pseudo-clases: <code>a:hover</code>, <code>:focus</code>, <code>:first-child</code>; Pseudo-elementos: <code>::before</code></li>
+  </ul>
+</section>
+
+<footer>
+  <hr>
+  <p>Material educativo de ejemplo.</p>
+</footer>
+</body>
+</html>
