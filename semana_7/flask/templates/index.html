@@ -6,14 +6,27 @@
 </head>
 <body>
     <h1>Lista de Animales</h1>
-    <ul>
-        {% for animal in animales %}
-        <li>{{ animal.nombre }} ({{ animal.especie }})
-            <a href="/editar/{{ animal.nombre }}">Editar</a>
-            <a href="/eliminar/{{ animal.nombre }}">Eliminar</a>
-        </li>
-        {% endfor %}
-    </ul>
-    <a href="/crear">Agregar Animal</a>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Especie</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for animal in animales %}
+                <tr>
+                    <td>{{ animal.nombre }}</td>
+                    <td>{{ animal.especie }}</td>
+                    <td>
+                        <a href="/animal/editar/{{ animal.nombre }}">Editar</a>
+                        <a href="/animal/eliminar/{{ animal.nombre }}">Eliminar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    <a href="/animal/crear">Agregar Animal</a>
 </body>
 </html>

@@ -35,10 +35,13 @@ class ListaEnlazada:
             actual = actual.siguiente
         return False
 
-    def listar(self):
-        animales = []
-        actual = self.cabeza
-        while actual:
-            animales.append(actual.animal)
-            actual = actual.siguiente
-        return animales
+    def __iter__(self):
+        self._iter_actual = self.cabeza
+        return self
+
+    def __next__(self):
+        if self._iter_actual is None:
+            raise StopIteration
+        animal = self._iter_actual.animal
+        self._iter_actual = self._iter_actual.siguiente
+        return animal
