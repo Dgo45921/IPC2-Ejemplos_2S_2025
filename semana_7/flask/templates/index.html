@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Animales</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Lista de Animales</h1>
+    <ul>
+        {% for animal in animales %}
+        <li>{{ animal.nombre }} ({{ animal.especie }})
+            <a href="/editar/{{ animal.nombre }}">Editar</a>
+            <a href="/eliminar/{{ animal.nombre }}">Eliminar</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/crear">Agregar Animal</a>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario Animal</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>{{ titulo }}</h1>
+    <form method="post">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" value="{{ animal.nombre if animal else '' }}" required><br>
+        <label>Especie:</label>
+        <input type="text" name="especie" value="{{ animal.especie if animal else '' }}" required><br>
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="/">Volver</a>
+</body>
+</html>
