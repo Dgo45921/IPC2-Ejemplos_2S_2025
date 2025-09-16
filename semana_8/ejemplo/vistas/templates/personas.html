@@ -1,0 +1,15 @@
+{% extends "index.html" %} {%block title %}Lista de personas{% endblock %} 
+{%block content %}
+
+<h1 class="text-center">Lista de Personas</h1>
+<ul class="list-group">
+  {% for persona in personas %}
+  <li class="list-group-item">
+    {{ persona.nombre }} - {{ persona.edad }} años
+  </li>
+  {% empty %}
+  <li class="list-group-item">No hay personas registradas.</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
