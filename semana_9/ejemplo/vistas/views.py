@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from django.views.generic.detail import DetailView
 from .models import Persona
 
 def home(request):
@@ -20,3 +21,8 @@ def personas(request):
     }
     
     return render(request, 'personas.html', contexto)
+
+
+class PersonaDetailView(DetailView):
+    model = Persona
+    template_name = 'persona_detail.html'
