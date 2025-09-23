@@ -1,5 +1,12 @@
 from django.contrib import admin
-from .models import Persona
+from .models import Persona, Direccion
 
 
-admin.site.register(Persona)
+
+class DireccionInline(admin.TabularInline):
+    model = Direccion
+    extra = 1
+
+@admin.register(Persona)
+class PersonaAdmin(admin.ModelAdmin):
+    inlines = [DireccionInline]
