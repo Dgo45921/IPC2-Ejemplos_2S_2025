@@ -39,7 +39,6 @@ def index(request):
 @csrf_exempt
 def crear(request):
     if request.method == 'POST':
-        print("Formulario recibido con método POST")  # Depuración
         # Obtener los datos del formulario
         persona_id = request.POST.get('id')
         nombre = request.POST.get('nombre')
